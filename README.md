@@ -1,6 +1,6 @@
 # qr-gen
 
-A fast, private, and 100% self-contained QR code generator designed to run straight from **GitHub Pages** (or any static host) with zero build steps and zero server dependencies.
+A fast, private, and 100% self-contained QR code generator designed to run straight from **GitHub Pages** with zero build steps and zero server dependencies.
 
 ---
 
