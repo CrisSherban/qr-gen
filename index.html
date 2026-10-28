@@ -113,6 +113,35 @@
               </div>
             </div>
 
+            <!-- Label / Caption -->
+            <div class="form-group full-width">
+              <label for="qr-label">
+                Add Text / Caption <span class="hint">(optional)</span>
+                <span class="info-tip" title="Add custom text like 'SCAN ME' printed below, above, or in a center badge inside the QR code.">ⓘ</span>
+              </label>
+              <div class="label-input-group">
+                <input
+                  type="text"
+                  id="qr-label"
+                  placeholder="e.g. SCAN ME"
+                  maxlength="40"
+                  spellcheck="false"
+                >
+                <select id="label-position" class="form-select label-pos-select" title="Label Position">
+                  <option value="below" selected>Below QR code</option>
+                  <option value="above">Above QR code</option>
+                  <option value="center">Center badge</option>
+                </select>
+              </div>
+              <div class="preset-chips label-chips">
+                <button type="button" class="preset-chip label-chip" data-label="SCAN ME">SCAN ME</button>
+                <button type="button" class="preset-chip label-chip" data-label="VISIT LINK">VISIT LINK</button>
+                <button type="button" class="preset-chip label-chip" data-label="WI-FI">WI-FI</button>
+                <button type="button" class="preset-chip label-chip" data-label="MENU">MENU</button>
+                <button type="button" class="preset-chip label-chip clear-label-chip" data-label="">None</button>
+              </div>
+            </div>
+
             <!-- Error Correction -->
             <div class="form-group">
               <label for="error-level">
@@ -276,9 +305,9 @@
 
   <div id="toast" class="toast hidden"></div>
 
-  <!-- Vendor dependencies (self-contained, no external requests required) -->
-  <script src="vendor/qrcode.min.js"></script>
-  <script src="vendor/jspdf.umd.min.js"></script>
+  <!-- External Libraries loaded on-demand via CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode/1.5.1/qrcode.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
   <script src="app.js"></script>
 </body>
 </html>

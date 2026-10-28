@@ -337,6 +337,30 @@ input[type="color"]::-webkit-color-swatch {
   font-weight: 600;
 }
 
+/* Label / Caption Input Group */
+.label-input-group {
+  display: flex;
+  gap: 0.5rem;
+}
+
+@media (max-width: 520px) {
+  .label-input-group {
+    flex-direction: column;
+  }
+}
+
+.label-input-group input[type="text"] {
+  flex: 1.35;
+}
+
+.label-pos-select {
+  flex: 1;
+}
+
+.label-chips {
+  margin-top: 0.35rem;
+}
+
 /* Range Slider */
 input[type="range"] {
   width: 100%;
@@ -418,10 +442,14 @@ input[type="range"] {
 }
 
 #qr-canvas {
-  max-width: 100%;
+  display: block;
+  max-width: 260px;
   max-height: 260px;
-  width: auto;
+  width: 100%;
   height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  margin: 0 auto;
   border-radius: var(--radius-sm);
   box-shadow: var(--shadow-md);
   background-color: #ffffff;
